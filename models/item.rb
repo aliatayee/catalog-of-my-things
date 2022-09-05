@@ -33,6 +33,10 @@ class Item
     genre.add_item(self) unless @genre.items.include?(self)
   end
 
+  def move_to_archive
+    @archived = true if can_be_archived?
+  end
+
   private
 
   def can_be_archived?
