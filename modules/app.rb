@@ -19,7 +19,7 @@ module App
 
     def perform_main_operation(input)
       case input
-        
+
       when 1
         puts "\nList @books"
 
