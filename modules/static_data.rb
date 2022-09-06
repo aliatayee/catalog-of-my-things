@@ -1,6 +1,12 @@
+require_relative '../models/source'
+
 module StaticData
   def self.sources
-    ['From a friend', 'Online shop']
+    sources = []
+    ['From a friend', 'Online shop'].each do |source|
+      sources << Source.new(source)
+    end
+    sources
   end
 
   def self.genres

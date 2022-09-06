@@ -25,31 +25,11 @@ module Options
     end
   end
 
-  def self.list_genres(list)
-    puts "\nSelect One Genre From The List"
-    list.each.with_index(1) do |item, i|
-      puts "#{i} - #{item}"
-    end
-  end
-
-  def self.list_lables(list)
-    puts "\nSelect One Label From The List"
-    list.each.with_index(1) do |item, i|
-      puts "#{i} - #{item}"
-    end
-  end
-
   def self.list_sources(list)
-    puts "\nSelect One Source From The List"
+    puts "\nAvailable Sources are:"
+    print "\n"
     list.each.with_index(1) do |item, i|
-      puts "#{i} - #{item}"
-    end
-  end
-
-  def self.list_authors(list)
-    puts "\nSelect One Author From The List"
-    list.each.with_index(1) do |item, i|
-      puts "#{i} - #{item}"
+      puts "#{i} - #{item.name}"
     end
   end
 end

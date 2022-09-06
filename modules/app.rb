@@ -76,8 +76,7 @@ module App
         puts "\nAvailable Authors are"
         Options.list_data @authors
       when 8
-        puts "\nAvailable Sources are"
-        Options.list_data @sources
+        Options.list_sources @sources
       end
     end
   end
