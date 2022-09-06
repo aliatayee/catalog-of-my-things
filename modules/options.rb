@@ -18,6 +18,13 @@ module Options
     puts '13 - Quit'
   end
 
+  def self.list_data(list)
+    puts "\n"
+    list.each.with_index(1) do |item, i|
+      puts "#{i} - #{item}"
+    end
+  end
+
   def self.list_genres(list)
     puts "\nSelect One Genre From The List"
     list.each.with_index(1) do |item, i|

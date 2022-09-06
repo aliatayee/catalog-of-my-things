@@ -1,3 +1,6 @@
+require_relative 'static_data'
+require_relative 'options'
+
 module App
   def self.take_input(range)
     input = gets.chomp
@@ -17,7 +20,7 @@ module App
       @genres = %w[Comedy Thriller]
       @lables = %w[Gift New]
       @authors = ['Stephen King', 'J K Rowling']
-      @sources = ['From a friend', 'Online shop']
+      @sources = StaticData.source_data
     end
 
     def save_data
@@ -70,7 +73,8 @@ module App
       when 7
         puts "\nList @authors"
       when 8
-        puts "\nList @sources"
+        puts "\nAvailable Sources are"
+        Options.list_data @sources
       end
     end
   end
