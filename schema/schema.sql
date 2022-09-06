@@ -43,3 +43,10 @@ CREATE TABLE items (
     CONSTRAINT label_fk FOREIGN KEY (label_id) REFERENCES labels (id),
     CONSTRAINT source_fk FOREIGN KEY (source_id) REFERENCES sources (id)
 );
+
+CREATE TABLE movies (
+    id INT,
+    name VARCHAR(100),
+    silent BOOLEAN,
+    CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
+);
