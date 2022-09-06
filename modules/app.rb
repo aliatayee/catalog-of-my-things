@@ -1,3 +1,7 @@
+require_relative 'static_data'
+require_relative 'options'
+require_relative 'utility'
+
 module App
   def self.take_input(range)
     input = gets.chomp
@@ -12,17 +16,17 @@ module App
     def initialize
       @books = []
       @music_albums = []
-      @movies = []
+      @movies = MOVIE_CONTROLLER.list
       @games = []
-      @genres = %w[Comedy Thriller]
-      @lables = %w[Gift New]
-      @authors = ['Stephen King', 'J K Rowling']
-      @sources = ['From a friend', 'Online shop']
+      @genres = StaticData.genres
+      @labels = StaticData.labels
+      @authors = StaticData.authors
+      @sources = StaticData.sources
     end
 
     def save_data
-      # save @books, @music_albums
-      # @movies, @games
+      # save @books, @music_albums, @games
+      MOVIE_CONTROLLER.save(@movies)
     end
 
     def perform_main_operation(input)
@@ -35,7 +39,8 @@ module App
       when 10
         puts "\nAdd @music album"
       when 11
-        puts "\nAdd @movie"
+        @movies << Utility.create_movies
+        puts 'Movie created successfully'
       when 12
         puts "\nAdd @game"
       else
@@ -53,7 +58,7 @@ module App
       when 2
         puts "\nList @music_albums"
       when 3
-        puts "\nList @movies"
+        Utility.list_movies(@movies)
       when 4
         puts "\nList @games"
       when 5..8
@@ -64,13 +69,16 @@ module App
     def handle_static_list(input)
       case input
       when 5
-        puts "\nList @genres"
+        puts "\nAvailable Genres are"
+        Options.list_data @genres
       when 6
-        puts "\nList @labels"
+        puts "\nAvailable Labels are"
+        Options.list_data @labels
       when 7
-        puts "\nList @authors"
+        puts "\nAvailable Authors are"
+        Options.list_data @authors
       when 8
-        puts "\nList @sources"
+        Options.list_sources @sources
       end
     end
   end

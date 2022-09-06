@@ -7,10 +7,10 @@ module Options
     puts '2 - List all music albums'
     puts '3 - List all movies'
     puts '4 - List of games'
-    puts '5 - List all genres (e.g \'Comedy\', \'Thriller\')'
-    puts '6 - List all labels (e.g. \'Gift\', \'New\')'
-    puts '7 - List all authors (e.g. \'Stephen King\')'
-    puts '8 - List all sources (e.g. \'From a friend\', \'Online shop\')'
+    puts '5 - List all genres'
+    puts '6 - List all labels'
+    puts '7 - List all authors'
+    puts '8 - List all sources'
     puts '9 - Add a book'
     puts '10 - Add a music album'
     puts '11 - Add a movie'
@@ -18,31 +18,18 @@ module Options
     puts '13 - Quit'
   end
 
-  def self.list_genres(list)
-    puts "\nSelect One Genre From The List"
-    list.each.with_index(1) do |item, i|
-      puts "#{i} - #{item}"
-    end
-  end
-
-  def self.list_lables(list)
-    puts "\nSelect One Label From The List"
+  def self.list_data(list)
+    puts "\n"
     list.each.with_index(1) do |item, i|
       puts "#{i} - #{item}"
     end
   end
 
   def self.list_sources(list)
-    puts "\nSelect One Source From The List"
+    puts "\nAvailable Sources are:"
+    print "\n"
     list.each.with_index(1) do |item, i|
-      puts "#{i} - #{item}"
-    end
-  end
-
-  def self.list_authors(list)
-    puts "\nSelect One Author From The List"
-    list.each.with_index(1) do |item, i|
-      puts "#{i} - #{item}"
+      puts "#{i} - #{item.name}"
     end
   end
 end
