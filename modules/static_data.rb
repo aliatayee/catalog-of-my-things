@@ -2,11 +2,7 @@ require_relative '../models/source'
 
 module StaticData
   def self.sources
-    sources = []
-    ['From a friend', 'Online shop'].each do |source|
-      sources << Source.new(source)
-    end
-    sources
+    ['From a friend', 'Online shop'].map { |source| Source.new(source) }
   end
 
   def self.genres
