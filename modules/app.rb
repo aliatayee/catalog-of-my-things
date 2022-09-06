@@ -14,7 +14,7 @@ module App
     attr_reader :books, :music_albums, :movies, :games
 
     def initialize
-      @books = []
+      @books = BOOK_CONTROLLER.load_books
       @music_albums = []
       @movies = MOVIE_CONTROLLER.list
       @games = []
@@ -27,6 +27,7 @@ module App
     def save_data
       # save @books, @music_albums, @games
       MOVIE_CONTROLLER.save(@movies)
+      BOOK_CONTROLLER.save_books
     end
 
     def perform_main_operation(input)
@@ -35,7 +36,7 @@ module App
       when 1..8
         handle_list_inputs(input)
       when 9
-        puts "\nAdd @Book"
+        @books << BOOK_CONTROLLER.add_book
       when 10
         puts "\nAdd @music album"
       when 11
@@ -54,7 +55,7 @@ module App
       case input.to_i
 
       when 1
-        puts "\nList @books"
+        BOOK_CONTROLLER.list_all_books
       when 2
         puts "\nList @music_albums"
       when 3
