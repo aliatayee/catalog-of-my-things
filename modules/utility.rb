@@ -19,8 +19,8 @@ module Utility
 
     puts 'Movie List:'
     movies.each.with_index(1) do |movie, i|
-      puts "\n#{i}) Name: #{movie.name}, Is Silent: #{movie.silent == true ? 'Yes' : 'No'}, "
-      print "Publish Date: #{movie.publish_date}"
+      print "\n#{i}) Name: #{movie.name}, Is Silent: #{movie.silent == true ? 'Yes' : 'No'}, "
+      puts "Publish Date: #{movie.publish_date}"
     end
   end
 end
