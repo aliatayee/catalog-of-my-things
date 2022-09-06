@@ -1,5 +1,6 @@
 require_relative 'static_data'
 require_relative 'options'
+require_relative 'utility'
 
 module App
   def self.take_input(range)
@@ -38,7 +39,8 @@ module App
       when 10
         puts "\nAdd @music album"
       when 11
-        puts "\nAdd @movie"
+        @movies << Utility.create_movies
+        puts 'Movie created successfully'
       when 12
         puts "\nAdd @game"
       else
@@ -56,7 +58,7 @@ module App
       when 2
         puts "\nList @music_albums"
       when 3
-        puts "\nList @movies"
+        Utility.list_movies(@movies)
       when 4
         puts "\nList @games"
       when 5..8
