@@ -18,27 +18,31 @@ module Options
     puts '13 - Quit'
   end
 
-  def list_genres
-    puts "\nSelect One From The List"
-    puts '1 - Comedy'
-    puts '2- Thriller'
+  def self.list_genres(list)
+    puts "\nSelect One Genre From The List"
+    list.each.with_index(1) do |item, i|
+      puts "#{i} - #{item}"
+    end
   end
 
-  def list_lables
-    puts "\nSelect One From The List"
-    puts '1 - Gist'
-    puts '2 - New'
+  def self.list_lables(list)
+    puts "\nSelect One Label From The List"
+    list.each.with_index(1) do |item, i|
+      puts "#{i} - #{item}"
+    end
   end
 
-  def list_sources
-    puts "\nSelect One From The List"
-    puts '1 - From a friend'
-    puts '2 - Online shop'
+  def self.list_sources(list)
+    puts "\nSelect One Source From The List"
+    list.each.with_index(1) do |item, i|
+      puts "#{i} - #{item}"
+    end
   end
 
-  def list_authors
-    puts "\nSelect One From The List"
-    puts '1 - Stephen Kin'
-    puts '2 - J. K. Rowling'
+  def self.list_authors(list)
+    puts "\nSelect One Author From The List"
+    list.each.with_index(1) do |item, i|
+      puts "#{i} - #{item}"
+    end
   end
 end
