@@ -28,3 +28,18 @@ CREATE TABLE sources (
     name VARCHAR(100),
     PRIMARY KEY(id)
 );
+
+CREATE TABLE items (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    genre_id INT,
+    author_id INT,
+    label_id INT,
+    source_id INT,
+    publish_date DATE,
+    archived BOOLEAN,
+    PRIMARY KEY(id),
+    CONSTRAINT genre_fk FOREIGN KEY (genre_id) REFERENCES genres (id),
+    CONSTRAINT author_fk FOREIGN KEY (author_id) REFERENCES authors (id),
+    CONSTRAINT label_fk FOREIGN KEY (label_id) REFERENCES labels (id),
+    CONSTRAINT source_fk FOREIGN KEY (source_id) REFERENCES sources (id)
+);
