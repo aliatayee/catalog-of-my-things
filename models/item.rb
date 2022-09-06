@@ -30,7 +30,7 @@ class Item
 
   def add_label(label)
     @label = label
-    genre.add_item(self) unless @genre.items.include?(self)
+    label.add_item(self) unless @label.items.include?(self)
   end
 
   def move_to_archive
@@ -40,9 +40,8 @@ class Item
   private
 
   def can_be_archived?
-    date_diff = Date.today.year - Date.parse(@published_date).year
-    return false if date_diff.to_i > 10
-
-    true
+    published_date_formatted = Date.parse(@published_date)
+    date_diff = Date.today.year - published_date_formatted.year
+    date_diff.to_i > 10
   end
 end
