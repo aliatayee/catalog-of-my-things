@@ -17,7 +17,7 @@ module App
       @books = []
       @music_albums = []
       @movies = MOVIE_CONTROLLER.list
-      @games = []
+      @games = GAME_CONTROLLER.list
       @genres = StaticData.genres
       @labels = StaticData.labels
       @authors = StaticData.authors
@@ -27,6 +27,7 @@ module App
     def save_data
       # save @books, @music_albums, @games
       MOVIE_CONTROLLER.save(@movies)
+      GAME_CONTROLLER.save(@games)
     end
 
     def perform_main_operation(input)
