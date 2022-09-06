@@ -13,6 +13,6 @@ class Game < Item
   private
 
   def can_be_archived?
-    super || multiplayer
+    super && Date.today.year - Date.parse(@last_played).year > 2
   end
 end
