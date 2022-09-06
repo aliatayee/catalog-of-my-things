@@ -1,4 +1,5 @@
 class Source
+  attr_accessor :name
   attr_reader :id, :items
 
   def initialize(id, name)
