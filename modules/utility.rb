@@ -1,4 +1,5 @@
 require_relative '../models/movie'
+require_relative '../models/game'
 
 module Utility
   def self.create_movies
@@ -23,4 +24,28 @@ module Utility
       puts "Publish Date: #{movie.publish_date}"
     end
   end
+
+  def self.create_games
+    print 'Game Name: '
+    name = gets.strip.chomp
+
+    puts 'Date of publish [Enter date in format (yyyy-mm-dd)]'
+    last_played = gets.chomp
+
+    print 'Is it a multiplayer Game? Y/N: '
+    multiplayer = gets.strip.chomp.downcase == 'y'
+
+    Game.new(name, last_played, multiplayer)
+  end
+
+  def self.list_games(games)
+    return puts 'No games listed yet' if games.count.zero?
+
+    puts 'Game List:'
+    games.each.with_index(1) do |game, i|
+      print "\n#{i}) Name: #{game.name}, Is Multiplayer: #{game.multiplayer == true ? 'Yes' : 'No'}, "
+      puts "Last Played: #{game.last_played}"
+    end
+  end
+
 end

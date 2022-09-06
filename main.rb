@@ -1,8 +1,10 @@
 require_relative 'modules/options'
 require_relative 'modules/app'
 require_relative 'controllers/movie'
+require_relative 'controllers/game'
 
 MOVIE_CONTROLLER = MovieController.new
+GAME_CONTROLLER = GameController.new
 
 puts 'Welcome Catalog of my things'
 

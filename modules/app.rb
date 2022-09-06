@@ -42,7 +42,8 @@ module App
         @movies << Utility.create_movies
         puts 'Movie created successfully'
       when 12
-        puts "\nAdd @game"
+        @games << Utility.create_games
+        puts "Game created successfully"
       else
         puts input
       end
@@ -60,7 +61,7 @@ module App
       when 3
         Utility.list_movies(@movies)
       when 4
-        puts "\nList @games"
+        Utility.list_games(@games)
       when 5..8
         handle_static_list(input)
       end

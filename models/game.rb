@@ -1,4 +1,4 @@
-require 'item'
+require_relative 'item'
 
 class Game < Item
   attr_accessor :name, :last_played, :multiplayer
