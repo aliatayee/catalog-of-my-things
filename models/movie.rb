@@ -3,10 +3,10 @@ require_relative 'item'
 class Movie < Item
   attr_accessor :silent, :name
 
-  def initialize(title, silent, publish_date)
+  def initialize(name, silent, publish_date)
     super(nil, publish_date)
     @silent = silent
-    @title = title
+    @name = name
   end
 
   private
