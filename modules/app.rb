@@ -1,4 +1,11 @@
 module App
+  def self.take_input(range)
+    input = gets.chomp
+    return "\n'#{input}' is not a valid input.\nPlease try again" unless range.include?(input.to_i)
+
+    input.to_i
+  end
+
   class INIT
     attr_reader :books, :music_albums, :movies, :games
 
@@ -66,12 +73,5 @@ module App
         puts "\nList @sources"
       end
     end
-  end
-
-  def self.take_input(range)
-    input = gets.chomp
-    return "\n'#{input}' is not a valid input.\nPlease try again" unless range.include?(input.to_i)
-
-    input.to_i
   end
 end
