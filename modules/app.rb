@@ -17,10 +17,10 @@ module App
       @music_albums = []
       @movies = []
       @games = []
-      @genres = %w[Comedy Thriller]
-      @lables = %w[Gift New]
-      @authors = ['Stephen King', 'J K Rowling']
-      @sources = StaticData.source_data
+      @genres = StaticData.genres
+      @labels = StaticData.labels
+      @authors = StaticData.authors
+      @sources = StaticData.sources
     end
 
     def save_data
@@ -67,11 +67,14 @@ module App
     def handle_static_list(input)
       case input
       when 5
-        puts "\nList @genres"
+        puts "\nAvailable Genres are"
+        Options.list_data @genres
       when 6
-        puts "\nList @labels"
+        puts "\nAvailable Labels are"
+        Options.list_data @labels
       when 7
-        puts "\nList @authors"
+        puts "\nAvailable Authors are"
+        Options.list_data @authors
       when 8
         puts "\nAvailable Sources are"
         Options.list_data @sources
