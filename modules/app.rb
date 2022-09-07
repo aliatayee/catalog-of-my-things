@@ -69,8 +69,7 @@ module App
     def handle_static_list(input)
       case input
       when 5
-        puts "\nAvailable Genres are"
-        Options.list_data @genres
+        Options.list_genres @genres
       when 6
         puts "\nAvailable Labels are"
         Options.list_data @labels

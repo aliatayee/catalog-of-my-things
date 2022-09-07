@@ -23,4 +23,17 @@ module Utility
       puts "Publish Date: #{movie.publish_date}"
     end
   end
+
+  def self.create_music
+    print 'Album Name: '
+    name = gets.strip.chomp
+
+    puts 'Date of publish [Enter date in format (yyyy-mm-dd)]'
+    publish_date = gets.chomp
+
+    print 'Is it a Silent Movie? Y/N: '
+    silent = gets.strip.chomp.downcase == 'y'
+
+    Movie.new(name, silent, publish_date)
+  end
 end
