@@ -62,7 +62,7 @@ module App
       when 1
         BOOK_CONTROLLER.list_all_books
       when 2
-        puts "\nList @music_albums"
+        Utility.list_music_albums(@music_albums)
       when 3
         Utility.list_movies(@movies)
       when 4
