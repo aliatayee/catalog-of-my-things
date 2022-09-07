@@ -1,4 +1,5 @@
 require_relative '../models/source'
+require_relative '../models/author'
 
 module StaticData
   def self.sources
@@ -14,6 +15,6 @@ module StaticData
   end
 
   def self.authors
-    ['Stephen King', 'J K Rowling']
+    Author.new('John', 'Doe') 
   end
 end

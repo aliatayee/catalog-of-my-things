@@ -35,7 +35,7 @@ module Utility
     print 'Is it a multiplayer Game? Y/N: '
     multiplayer = gets.strip.chomp.downcase == 'y'
 
-    Game.new(name, last_played, multiplayer)
+    Game.new(name, multiplayer, last_played)
   end
 
   def self.list_games(games)
