@@ -25,7 +25,6 @@ module Utility
       puts "Publish Date: #{movie.publish_date}"
     end
   end
-
   def self.create_games
     print 'Game Name: '
     name = gets.strip.chomp

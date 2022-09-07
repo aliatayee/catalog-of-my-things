@@ -8,7 +8,7 @@ module StaticData
   end
 
   def self.genres
-    %w[Comedy Thriller].map { |genre| Genre.new(genre) }
+    %w[Comedy Thriller]
   end
 
   def self.labels
