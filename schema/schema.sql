@@ -50,3 +50,10 @@ CREATE TABLE movies (
     silent BOOLEAN,
     CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
 );
+
+CREATE TABLE books (
+    id INT,
+    publisher VARCHAR(100),
+    cover_state VARCHAR(4),
+    CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
+);
