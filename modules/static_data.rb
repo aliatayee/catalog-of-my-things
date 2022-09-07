@@ -15,6 +15,6 @@ module StaticData
   end
 
   def self.authors
-    Author.new('John', 'Doe') 
+    Author.new('John', 'Doe')
   end
 end

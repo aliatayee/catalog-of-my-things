@@ -47,5 +47,4 @@ module Utility
       puts "Last Played: #{game.last_played}"
     end
   end
-
 end
