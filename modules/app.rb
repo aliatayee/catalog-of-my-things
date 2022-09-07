@@ -15,7 +15,7 @@ module App
 
     def initialize
       @books = []
-      @music_albums = []
+      @music_albums = MUSIC_CONTROLLER.list
       @movies = MOVIE_CONTROLLER.list
       @games = []
       @genres = StaticData.genres
@@ -27,6 +27,7 @@ module App
     def save_data
       # save @books, @music_albums, @games
       MOVIE_CONTROLLER.save(@movies)
+      MUSIC_CONTROLLER.save(@music_albums)
     end
 
     def perform_main_operation(input)
@@ -37,7 +38,8 @@ module App
       when 9
         puts "\nAdd @Book"
       when 10
-        puts "\nAdd @music album"
+        @music_albums << Utility.create_music_album
+        puts 'Music Album created successfully'
       when 11
         @movies << Utility.create_movies
         puts 'Movie created successfully'
@@ -56,7 +58,7 @@ module App
       when 1
         puts "\nList @books"
       when 2
-        puts "\nList @music_albums"
+        Utility.list_music_albums(@music_albums)
       when 3
         Utility.list_movies(@movies)
       when 4

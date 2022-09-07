@@ -6,14 +6,13 @@ class MusicController
 
   def list
     HandleFiles.read('musics.json').map do |music|
-      obj = MusicAlbum.new(music['album'], music['genres'], music['genre_name'])
-      obj
+      MusicAlbum.new(music['name'], music['publish_date'], music['on_spotify'], music['id'])
     end
   end
 
   def save(musics)
     save_obj = musics.map do |album|
-      { id: album.id, genre: album.genre.name, publish_date: album.publish_date, on_spotify: album.on_spotify }
+      { id: album.id, name: album.name, publish_date: album.publish_date, on_spotify: album.on_spotify }
     end
     HandleFiles.write('musics.json', save_obj)
   end
