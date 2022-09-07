@@ -15,7 +15,7 @@ module App
 
     def initialize
       @books = BOOK_CONTROLLER.load_books
-      @music_albums = []
+      @music_albums = MUSIC_CONTROLLER.list
       @movies = MOVIE_CONTROLLER.list
       @games = GAME_CONTROLLER.list
       @genres = StaticData.genres
@@ -30,6 +30,7 @@ module App
       BOOK_CONTROLLER.save_books
       LABEL_CONTROLLER.save_labels
       GAME_CONTROLLER.save(@games)
+      MUSIC_CONTROLLER.save(@music_albums)
     end
 
     def perform_main_operation(input)
