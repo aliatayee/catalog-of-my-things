@@ -10,7 +10,6 @@ BOOK_CONTROLLER = BookController.new
 LABEL_CONTROLLER = LabelController.new
 GAME_CONTROLLER = GameController.new
 
-
 puts 'Welcome Catalog of my things'
 
 def main(app)
