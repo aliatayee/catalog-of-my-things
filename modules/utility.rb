@@ -1,4 +1,5 @@
 require_relative '../models/movie'
+require_relative '../models/music_album'
 
 module Utility
   def self.create_movies
@@ -21,6 +22,29 @@ module Utility
     movies.each.with_index(1) do |movie, i|
       print "\n#{i}) Name: #{movie.name}, Is Silent: #{movie.silent == true ? 'Yes' : 'No'}, "
       puts "Publish Date: #{movie.publish_date}"
+    end
+  end
+
+  def self.create_music_album
+    print 'Album Name: '
+    name = gets.strip.chomp
+
+    puts 'Date of publish [Enter date in format (yyyy-mm-dd)]'
+    publish_date = gets.chomp
+
+    print 'Album On Spotify? Y/N: '
+    on_spotify = gets.strip.chomp.downcase == 'y'
+
+    MusicAlbum.new(name, publish_date, on_spotify)
+  end
+
+  def self.list_music_albums(musics)
+    return puts 'No music album listed yet' if musics.count.zero?
+
+    puts 'Music List:'
+    musics.each.with_index(1) do |music, i|
+      print "\n#{i}) Name: #{music.name}, On Spotify: #{music.on_spotify == true ? 'Yes' : 'No'}, "
+      puts "Publish Date: #{music.publish_date}"
     end
   end
 end

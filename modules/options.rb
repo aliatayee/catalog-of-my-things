@@ -32,4 +32,12 @@ module Options
       puts "#{i} - #{item.name}"
     end
   end
+
+  def self.list_genres(list)
+    puts "\nAvailable genres are:"
+    print "\n"
+    list.each.with_index(1) do |item, i|
+      puts "#{i} - #{item.name}"
+    end
+  end
 end
