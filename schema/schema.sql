@@ -50,3 +50,10 @@ CREATE TABLE movies (
     silent BOOLEAN,
     CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
 );
+
+CREATE TABLE  music_albums(
+  id INT,
+  publish_date DATE,
+  on_spotify BOOLEAN,
+  CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
+);
