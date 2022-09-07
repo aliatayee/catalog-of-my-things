@@ -46,7 +46,7 @@ module App
         puts 'Movie created successfully'
       when 12
         @games << Utility.create_games
-        puts "Game created successfully"
+        puts 'Game created successfully'
       else
         puts input
       end
