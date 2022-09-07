@@ -9,8 +9,6 @@ class Label
     @items = []
   end
 
-  private
-
   def add_item(item)
     item.add_label(self)
     @items.push(item) unless @items.include?(item)
