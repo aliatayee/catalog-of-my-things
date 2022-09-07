@@ -1,5 +1,6 @@
 require_relative '../models/source'
 require_relative '../models/author'
+require_relative '../models/genre'
 
 module StaticData
   def self.sources
@@ -7,7 +8,7 @@ module StaticData
   end
 
   def self.genres
-    %w[Comedy Thriller]
+    %w[Comedy Thriller].map { |genre| Genre.new(genre) }
   end
 
   def self.labels
