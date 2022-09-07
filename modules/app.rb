@@ -14,12 +14,12 @@ module App
     attr_reader :books, :music_albums, :movies, :games
 
     def initialize
-      @books = []
-      @music_albums = MUSIC_CONTROLLER.list
+      @books = BOOK_CONTROLLER.load_books
+      @music_albums = []
       @movies = MOVIE_CONTROLLER.list
       @games = []
       @genres = StaticData.genres
-      @labels = StaticData.labels
+      @labels = LABEL_CONTROLLER.load_labels
       @authors = StaticData.authors
       @sources = StaticData.sources
     end
@@ -27,7 +27,8 @@ module App
     def save_data
       # save @books, @music_albums, @games
       MOVIE_CONTROLLER.save(@movies)
-      MUSIC_CONTROLLER.save(@music_albums)
+      BOOK_CONTROLLER.save_books
+      LABEL_CONTROLLER.save_labels
     end
 
     def perform_main_operation(input)
@@ -36,10 +37,9 @@ module App
       when 1..8
         handle_list_inputs(input)
       when 9
-        puts "\nAdd @Book"
+        @books << BOOK_CONTROLLER.add_book
       when 10
-        @music_albums << Utility.create_music_album
-        puts 'Music Album created successfully'
+        puts "\nAdd @music album"
       when 11
         @movies << Utility.create_movies
         puts 'Movie created successfully'
@@ -56,9 +56,9 @@ module App
       case input.to_i
 
       when 1
-        puts "\nList @books"
+        BOOK_CONTROLLER.list_all_books
       when 2
-        Utility.list_music_albums(@music_albums)
+        puts "\nList @music_albums"
       when 3
         Utility.list_movies(@movies)
       when 4
@@ -71,10 +71,11 @@ module App
     def handle_static_list(input)
       case input
       when 5
-        Options.list_genres @genres
+        puts "\nAvailable Genres are"
+        Options.list_data @genres
       when 6
         puts "\nAvailable Labels are"
-        Options.list_data @labels
+        LABEL_CONTROLLER.select_label
       when 7
         puts "\nAvailable Authors are"
         Options.list_data @authors
