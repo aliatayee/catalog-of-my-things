@@ -7,7 +7,7 @@ class BookController
 
   def initialize
     @books = []
-    @file_name = 'book.json'
+    @file_name = 'books.json'
   end
 
   def add_book()

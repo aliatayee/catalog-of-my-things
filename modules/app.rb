@@ -19,7 +19,7 @@ module App
       @movies = MOVIE_CONTROLLER.list
       @games = []
       @genres = StaticData.genres
-      @labels = StaticData.labels
+      @labels = LABEL_CONTROLLER.load_labels
       @authors = StaticData.authors
       @sources = StaticData.sources
     end
@@ -28,6 +28,7 @@ module App
       # save @books, @music_albums, @games
       MOVIE_CONTROLLER.save(@movies)
       BOOK_CONTROLLER.save_books
+      LABEL_CONTROLLER.save_labels
     end
 
     def perform_main_operation(input)
@@ -74,7 +75,7 @@ module App
         Options.list_data @genres
       when 6
         puts "\nAvailable Labels are"
-        Options.list_data @labels
+        LABEL_CONTROLLER.select_label
       when 7
         puts "\nAvailable Authors are"
         Options.list_data @authors
