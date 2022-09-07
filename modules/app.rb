@@ -40,7 +40,7 @@ module App
       when 9
         @books << BOOK_CONTROLLER.add_book
       when 10
-        puts "\nAdd @music album"
+        puts '\nAdd @music album'
       when 11
         @movies << Utility.create_movies
         puts 'Movie created successfully'
