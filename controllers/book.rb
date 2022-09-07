@@ -8,8 +8,6 @@ class BookController
   def initialize
     @books = []
     @file_name = 'book.json'
-
-    load_books
   end
 
   def add_book()
