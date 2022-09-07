@@ -40,8 +40,12 @@
 👤 **Amos**
 - GitHub: []()
 
-👤 **Sigei**
-- GitHub: []()
+
+👤 **Sigei Kiprono**
+
+- GitHub: [@ksigei](https://github.com/ksigei)
+- Twitter: [@_kipronojaphet](https://twitter.com/_kipronojaphet)
+- LinkedIn: [Kiprono Japhet](https://www.linkedin.com/in/kiprono-japhet/)
 
 
 ## 🤝 Contributing
