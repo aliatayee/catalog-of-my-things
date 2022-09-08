@@ -11,7 +11,8 @@ module Utility
     publish_date = gets.chomp
 
     print 'Is it a Silent Movie? Y/N: '
-    silent = gets.strip.chomp.downcase == 'y'
+    silent_inp = gets.strip.chomp.downcase
+    silent = %w[y yes].include?(silent_inp)
 
     Movie.new(name, silent, publish_date)
   end
@@ -34,7 +35,8 @@ module Utility
     last_played = gets.chomp
 
     print 'Is it a multiplayer Game? Y/N: '
-    multiplayer = gets.strip.chomp.downcase == 'y'
+    multiplayer_inp = gets.strip.chomp.downcase
+    multiplayer = %w[y yes].include?(multiplayer_inp)
 
     Game.new(name, multiplayer, last_played)
   end
@@ -57,7 +59,8 @@ module Utility
     publish_date = gets.chomp
 
     print 'Album On Spotify? Y/N: '
-    on_spotify = gets.strip.chomp.downcase == 'y'
+    spotify_inp = gets.strip.chomp.downcase
+    on_spotify = %w[y yes].include?(spotify_inp)
 
     MusicAlbum.new(name, publish_date, on_spotify)
   end

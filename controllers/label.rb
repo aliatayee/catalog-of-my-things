@@ -10,8 +10,10 @@ class LabelController
   end
 
   def select_label
-    puts "\nSelect 1 to add new label: "
-    puts "\nSelect 2 to list all labels:"
+    puts "\nSelect:"
+    puts "\t1 - to add new label"
+    puts "\t2 - to list all labels:"
+    print 'Your choice: '
     choice = gets.chomp.to_i
     unless (1..2).include?(choice)
       puts "\nInvalid choice #{choice}! Try again"
