@@ -35,7 +35,10 @@
 - LinkedIn: [Ritobroto Mukherjee](https://www.linkedin.com/in/ritobroto-mukherjee-519148ba/)
 
 👤 **Ali**
-- GitHub: []()
+- GitHub: [@aliatayee](https://github.com/aliatayee)
+- Twitter: [@aqaatayee](https://twitter.com/aqaatayee)
+- LinkedIn: [@aliatayee](https://www.linkedin.com/in/aliatayee/)
+
 
 👤 **Amos**
 - GitHub: [@bigmosi](https://github.com/bigmosi/)
