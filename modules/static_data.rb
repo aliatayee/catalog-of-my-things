@@ -16,8 +16,7 @@ module StaticData
   end
 
   def self.authors
-    [{first_name: 'John',  last_name: 'Doe'}, 
-      {first_name: 'J K',  last_name: 'Rowling'}
-    ].map { |author| Author.new(author[:first_name], author[:last_name]) }
+    [{ first_name: 'John', last_name: 'Doe' },
+     { first_name: 'J K', last_name: 'Rowling' }].map { |author| Author.new(author[:first_name], author[:last_name]) }
   end
 end
