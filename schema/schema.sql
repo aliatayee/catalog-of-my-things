@@ -51,6 +51,13 @@ CREATE TABLE movies (
     CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
 );
 
+CREATE TABLE books (
+    id INT,
+    publisher VARCHAR(100),
+    cover_state VARCHAR(4),
+    CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
+);
+
 CREATE TABLE  music_albums(
   id INT,
   publish_date DATE,
@@ -65,3 +72,4 @@ CREATE TABLE games(
     multiplayer BOOLEAN,
     CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
 )
+
