@@ -81,8 +81,7 @@ module App
         puts "\nAvailable Labels are"
         LABEL_CONTROLLER.select_label
       when 7
-        puts "\nAvailable Authors are"
-        Options.list_data @authors
+        Options.list_authors @authors
       when 8
         Options.list_sources @sources
       end
