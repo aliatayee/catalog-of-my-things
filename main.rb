@@ -1,12 +1,16 @@
 require_relative 'modules/options'
 require_relative 'modules/app'
 require_relative 'controllers/movie'
+require_relative 'controllers/game'
 require_relative 'controllers/book'
 require_relative 'controllers/label'
+require_relative 'controllers/music'
 
 MOVIE_CONTROLLER = MovieController.new
 BOOK_CONTROLLER = BookController.new
 LABEL_CONTROLLER = LabelController.new
+GAME_CONTROLLER = GameController.new
+MUSIC_CONTROLLER = MusicController.new
 
 puts 'Welcome Catalog of my things'
 

@@ -57,3 +57,19 @@ CREATE TABLE books (
     cover_state VARCHAR(4),
     CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
 );
+
+CREATE TABLE  music_albums(
+  id INT,
+  publish_date DATE,
+  on_spotify BOOLEAN,
+  CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
+);
+
+CREATE TABLE games(
+    id INT,
+    name VARCHAR(100),
+    last_palyed DATE,
+    multiplayer BOOLEAN,
+    CONSTRAINT item_fk FOREIGN KEY (id) REFERENCES items (id)
+)
+
