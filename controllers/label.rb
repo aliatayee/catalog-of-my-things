@@ -10,36 +10,37 @@ class LabelController
   end
 
   def select_label
-    puts "\nSelect a Label by number: "
-    list_all_labels(show_index: true)
-    puts "#{@labels.length + 1}) Add a label"
-    print "\nYour choice: "
+    puts "\nSelect:"
+    puts "\t1 - to add new label"
+    puts "\t2 - to list all labels:"
+    print 'Your choice: '
     choice = gets.chomp.to_i
-    if choice.zero? || choice > @labels.length + 1
-      puts 'Invalid choice! Try again'
+    unless (1..2).include?(choice)
+      puts "\nInvalid choice #{choice}! Try again"
       return select_label
     end
-    return add_label if choice == @labels.length + 1
 
-    @labels[choice - 1]
+    list_all_labels if choice == 2
+
+    add_label if choice == 1
   end
 
   def add_label
-    print 'Enter the title of Label: '
+    list_all_labels
+    print "\nEnter the title of New Label: "
     title = gets.chomp
-    print 'Enter the color of Label: '
+    print 'Enter the color of New Label: '
     color = gets.chomp
     new_label = Label.new(title, color)
     @labels << new_label
     puts 'Label added successfully!'
-    new_label
   end
 
-  def list_all_labels(show_index: false)
-    index = 1
-    @labels.each do |label|
-      puts "#{"#{index}) " if show_index}#{label.title} | #{label.color}"
-      index += 1
+  def list_all_labels
+    puts "\nAvailable labels are:"
+    print "\n"
+    @labels.each.with_index(1) do |label, index|
+      puts "#{index}) #{label.title} | #{label.color}"
     end
   end
 

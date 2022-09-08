@@ -27,6 +27,7 @@ class BookController
     new_book.can_be_archived?
     @books << new_book
     puts 'Book added Successfully!'
+    new_book
   end
 
   def list_all_books
@@ -34,7 +35,7 @@ class BookController
 
     puts 'Book List:'
     @books.each.with_index(1) do |book, i|
-      print "\n#{i}) Publish Date: #{book.publish_date}, Cover State: #{book.cover_state}, "
+      print "\n#{i}) Publisher: #{book.publisher}, Cover State: #{book.cover_state}, "
       puts "Publish Date: #{book.publish_date}"
     end
   end

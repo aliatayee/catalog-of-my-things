@@ -32,4 +32,12 @@ module Options
       puts "#{i} - #{item.name}"
     end
   end
+
+  def self.list_authors(list)
+    puts "\nAvailable Authors are:"
+    print "\n"
+    list.each.with_index(1) do |item, i|
+      puts "#{i} - #{item.first_name} #{item.last_name}"
+    end
+  end
 end
