@@ -35,13 +35,23 @@
 - LinkedIn: [Ritobroto Mukherjee](https://www.linkedin.com/in/ritobroto-mukherjee-519148ba/)
 
 👤 **Ali**
-- GitHub: []()
+- GitHub: [@aliatayee](https://github.com/aliatayee)
+- Twitter: [@aqaatayee](https://twitter.com/aqaatayee)
+- LinkedIn: [@aliatayee](https://www.linkedin.com/in/aliatayee/)
+
 
 👤 **Amos**
-- GitHub: []()
+- GitHub: [@bigmosi](https://github.com/bigmosi/)
+- Twitter: [@kinyera_amos](https://twitter.com/kinyera_amos)
+- LinkedIn: [kinyera-amos](https://linkedin.com/in/kinyera-amos)
 
-👤 **Sigei**
-- GitHub: []()
+
+
+👤 **Sigei Kiprono**
+
+- GitHub: [@ksigei](https://github.com/ksigei)
+- Twitter: [@_kipronojaphet](https://twitter.com/_kipronojaphet)
+- LinkedIn: [Kiprono Japhet](https://www.linkedin.com/in/kiprono-japhet/)
 
 
 ## 🤝 Contributing
