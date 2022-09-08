@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Ritobroto-Mukherjee-yellow?labelColor=blue)&nbsp;![](https://img.shields.io/badge/Ali-Atayee-yellow?labelColor=black)&nbsp;![](https://img.shields.io/badge/Kinyera-Amos-red?labelColor=blue)&nbsp;![](https://img.shields.io/badge/Sigei-Kiprono-white?labelColor=blue)
+![](https://img.shields.io/badge/Ritobroto-Mukherjee-yellow?labelColor=blue)&nbsp;![](https://img.shields.io/badge/Ali-Atayee-yellow?labelColor=black)&nbsp;![](https://img.shields.io/badge/Kinyera-Amos-red?labelColor=blue)&nbsp;![](https://img.shields.io/badge/Sigei-Kiprono-white?labelColor=green)
 
 # Catalog Of My Things
 
