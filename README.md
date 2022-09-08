@@ -38,7 +38,10 @@
 - GitHub: []()
 
 👤 **Amos**
-- GitHub: []()
+- GitHub: [@bigmosi](https://github.com/bigmosi/)
+- Twitter: [@kinyera_amos](https://twitter.com/kinyera_amos)
+- LinkedIn: [kinyera-amos](https://linkedin.com/in/kinyera-amos)
+
 
 
 👤 **Sigei Kiprono**
