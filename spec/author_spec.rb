@@ -23,12 +23,12 @@ describe Author do
 
   describe '#add_item' do
     it 'items count should become 1' do
-      book = double('book')
-      allow(book).to receive(:add_author).with(@author).and_return(true)
-      @author.add_item(book)
+      game = double('game')
+      allow(game).to receive(:add_author).with(@author).and_return(true)
+      @author.add_item(game)
 
       expect(@author.items.count).to eq 1
-      expect(@author.items[0]).to eq book
+      expect(@author.items[0]).to eq game
     end
   end
 end
