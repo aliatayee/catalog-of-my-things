@@ -29,7 +29,7 @@
 
 👤 **Ritobroto Mukherjee**
 
-- Portfolio: [@Rito](https://ritobrotomukherjee.github.io/Work-Portfolio/)
+- Portfolio: [@Rito](https://ritobroto-mukherjee.blogspot.com/)
 - GitHub: [@RitobrotoMukherjee](https://github.com/RitobrotoMukherjee)
 - Twitter: [@RitobrotoM3](https://twitter.com/RitobrotoM3)
 - LinkedIn: [Ritobroto Mukherjee](https://www.linkedin.com/in/ritobroto-mukherjee-519148ba/)
