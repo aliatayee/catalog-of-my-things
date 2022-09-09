@@ -4,6 +4,9 @@
 
 > It's a Catalog Storage **OOP(Object Oriented Programming)** project in Ruby. The project follows **SOLID** principles. The data gets added and deleted from `CLI` and gets preserved as **JSON** in a `.json` file. It's a simple project developed from a `UML diagram`. We are following **Gitflow** in this project. It's a pair programming, **Capstone** project. We have performed team code reviewing. This project have `unit test` for testing the `models` functionality.
 
+## Video Presentation
+> **Click Link To:** &nbsp;[View Presentation](https://drive.google.com/file/d/13v6RZTilHpBVKdiaMxEUE-2ZpKczJiNm/view?usp=sharing)
+
 ## Built With
 
 ![](https://img.shields.io/badge/Ruby-red)&nbsp;![](https://img.shields.io/badge/Github-black)&nbsp;![](https://img.shields.io/badge/RSpec-red)
